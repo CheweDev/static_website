@@ -1,9 +1,9 @@
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import AboutStory from "@/components/sections/aboutStory";
-import Mission from "@/components/sections/Mission";
+import Mission from "@/components/sections/mission";
 import WhyChooseUs from "@/components/sections/whyChooseUs";
-import Stats from "@/components/sections/Stats";
+import Stats from "@/components/sections/stats";
 import Cta from "@/components/sections/cta";
 import { missionCards, whyChooseUsItems, statsData } from "@/lib/data";
 import { Badge } from "@/components/ui/badge";

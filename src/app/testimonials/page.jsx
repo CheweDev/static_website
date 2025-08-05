@@ -1,7 +1,7 @@
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import Testimonials from "@/components/sections/testimonials";
-import Cta from "@/components/sections/Cta";
+import Cta from "@/components/sections/cta";
 import { testimonialsData } from "@/lib/data";
 import { Badge } from "@/components/ui/badge";
 
