@@ -79,10 +79,15 @@ const Header = () => {
                 <SheetHeader>
                   <SheetTitle>
                     <Link href="/" className="flex items-center space-x-3">
-                      <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl flex items-center justify-center">
-                        <Dumbbell className="h-6 w-6 text-white" />
-                      </div>
-                      <span className="text-2xl font-bold bg-gradient-to-r from-slate-900 to-slate-700 bg-clip-text text-transparent">
+                      <Image
+                        src="https://placehold.co/400"
+                        alt="FitPro Trainers Logo"
+                        width={40}
+                        height={40}
+                        className="w-10 h-10 rounded-full object-cover"
+                        unoptimized
+                      />
+                      <span className="text-xl font-bold bg-gradient-to-r from-slate-900 to-slate-700 bg-clip-text text-transparent">
                         FitPro Trainers
                       </span>
                     </Link>
@@ -91,7 +96,7 @@ const Header = () => {
                     Navigation menu for FitPro Trainers website.
                   </SheetDescription>
                 </SheetHeader>
-                <nav className="flex flex-col gap-6 mt-8">
+                <nav className="flex flex-col gap-4 p-5">
                   {navLinks.map((link) => (
                     <Link
                       key={link.name}
