@@ -2,14 +2,14 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const Cta = ({
+export default function CtaSection({
   title,
   description,
   primaryLink,
   primaryText,
   secondaryLink,
   secondaryText,
-}) => {
+}) {
   return (
     <section className="py-24 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 relative overflow-hidden">
       <div className="absolute inset-0">
@@ -29,7 +29,7 @@ const Cta = ({
             <Link href={primaryLink}>
               <Button
                 size="lg"
-                className="bg-white text-slate-900 btn-rounded-lg hover:bg-slate-100 shadow-xl hover:shadow-2xl transition-all duration-300"
+                className="bg-white btn-rounded-lg cursor-pointer text-slate-900 hover:bg-slate-100 shadow-xl hover:shadow-2xl transition-all duration-300"
               >
                 {primaryText}
                 {primaryLink === "/contact" && (
@@ -43,7 +43,7 @@ const Cta = ({
               <Button
                 size="lg"
                 variant="outline"
-                className="border-white/30 btn-rounded-lg text-white hover:bg-white/10 backdrop-blur-sm transition-all duration-300 bg-transparent"
+                className="border-white/30 btn-rounded-lg cursor-pointer hover:text-white text-white hover:bg-white/10 backdrop-blur-sm transition-all duration-300 bg-transparent"
               >
                 {secondaryText}
               </Button>
@@ -53,6 +53,4 @@ const Cta = ({
       </div>
     </section>
   );
-};
-
-export default Cta;
+}

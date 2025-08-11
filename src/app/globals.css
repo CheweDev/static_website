@@ -131,3 +131,22 @@
 .btn-rounded-md {
   border-radius: 0.375rem !important;
 }
+
+.blinking-cursor {
+  display: inline-block;
+  width: 1ch;
+  animation: blink 1s steps(2, start) infinite;
+}
+
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+
+@font-face {
+  font-family: "Debata";
+  src: url("/font/Debata-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}

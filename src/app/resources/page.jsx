@@ -1,11 +1,11 @@
-import Header from "@/components/layout/header";
-import Footer from "@/components/layout/footer";
-import BlogPosts from "@/components/sections/blogPosts";
-import Cta from "@/components/sections/cta";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+import BlogPostsGridSection from "@/components/sections/BlogPostsGridSection";
+import CtaSection from "@/components/sections/CtaSection";
 import { blogPosts } from "@/lib/data";
 import { Badge } from "@/components/ui/badge";
 
-const Resources = () => {
+export default function ResourcesPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-50">
       <Header />
@@ -34,8 +34,8 @@ const Resources = () => {
         </div>
       </section>
 
-      <BlogPosts posts={blogPosts} />
-      <Cta
+      <BlogPostsGridSection posts={blogPosts} />
+      <CtaSection
         title="Ready to Grow Your Training Business?"
         description="Join hundreds of successful personal trainers who trust us to handle their marketing while they focus on changing lives."
         primaryLink="/contact"
@@ -44,6 +44,4 @@ const Resources = () => {
       <Footer />
     </div>
   );
-};
-
-export default Resources;
+}

@@ -10,7 +10,7 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, CheckCircle } from "lucide-react";
 
-const PricingTiers = ({ tiers }) => {
+export default function PricingTiersSection({ tiers }) {
   return (
     <section className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -66,7 +66,7 @@ const PricingTiers = ({ tiers }) => {
                 </ul>
                 <Link href="/contact">
                   <Button
-                    className={`w-full btn-rounded-lg text-lg py-6 shadow-lg hover:shadow-xl transition-all duration-300 group ${
+                    className={`w-full text-lg py-6 shadow-lg hover:shadow-xl transition-all duration-300 group ${
                       tier.highlight
                         ? "bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white"
                         : "bg-slate-100 text-slate-800 hover:bg-slate-200"
@@ -83,6 +83,4 @@ const PricingTiers = ({ tiers }) => {
       </div>
     </section>
   );
-};
-
-export default PricingTiers;
+}

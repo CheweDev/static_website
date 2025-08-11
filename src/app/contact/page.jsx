@@ -1,16 +1,16 @@
-import Header from "@/components/layout/header";
-import Footer from "@/components/layout/footer";
-import ContactInfoSection from "@/components/sections/contactInfo";
-import ContactFormSection from "@/components/sections/contactForm";
-import OfficeInfoSection from "@/components/sections/officeInfo";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+import ContactInfoSection from "@/components/sections/ContactInfoSection";
+import OfficeInfoSection from "@/components/sections/OfficeInfoSection";
+import FAQSection from "@/components/sections/FAQSection";
 import { Badge } from "@/components/ui/badge";
 import { contactMethods, faqItems } from "@/lib/data";
-import Faq from "@/components/sections/faq";
 
 export default function ContactPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-50">
       <Header />
+
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700"></div>
         <div className="absolute inset-0 bg-black/20"></div>
@@ -33,9 +33,8 @@ export default function ContactPage() {
         </div>
       </section>
       <ContactInfoSection methods={contactMethods} />
-      <ContactFormSection />
       <OfficeInfoSection />
-      <Faq items={faqItems} />
+      <FAQSection items={faqItems} />
       <Footer />
     </div>
   );

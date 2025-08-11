@@ -46,12 +46,12 @@ const iconMap = {
   UserRoundMale,
 };
 
-const ServicesGrid = ({
+export default function ServicesGridSection({
   popular,
   specialized,
   lifeStage,
   trainerPreferences,
-}) => {
+}) {
   return (
     <section
       id="services"
@@ -78,12 +78,11 @@ const ServicesGrid = ({
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative h-80 md:h-[450px] rounded-xl overflow-hidden shadow-xl">
               <Image
-                src="https://placehold.co/600x400/png"
+                src="/placeholder.svg?height=500&width=600"
                 alt="Personal trainer working with client"
                 layout="fill"
                 objectFit="cover"
-                className="transition-transform rounded-3xl duration-500 hover:scale-105"
-                unoptimized
+                className="transition-transform duration-500 hover:scale-105"
               />
             </div>
 
@@ -142,12 +141,11 @@ const ServicesGrid = ({
 
             <div className="relative h-80 md:h-[450px] rounded-xl overflow-hidden shadow-xl order-1 md:order-2">
               <Image
-                src="https://placehold.co/600x400/png"
+                src="/placeholder.svg?height=500&width=600"
                 alt="Diverse age groups exercising"
                 layout="fill"
                 objectFit="cover"
-                className="transition-transform rounded-3xl duration-500 hover:scale-105"
-                unoptimized
+                className="transition-transform duration-500 hover:scale-105"
               />
             </div>
           </div>
@@ -224,6 +222,4 @@ const ServicesGrid = ({
       </div>
     </section>
   );
-};
-
-export default ServicesGrid;
+}

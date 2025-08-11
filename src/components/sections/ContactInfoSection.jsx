@@ -7,7 +7,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
-const ContactInfo = ({ methods }) => {
+export default function ContactInfoSection({ methods }) {
   return (
     <section className="py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -21,7 +21,7 @@ const ContactInfo = ({ methods }) => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-4">
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
           {methods.map((method) => (
             <Card
               key={method.id}
@@ -42,7 +42,7 @@ const ContactInfo = ({ methods }) => {
                 </p>
                 <p className="text-gray-600 mb-4">{method.hours}</p>
                 {method.buttonText && (
-                  <Button className="bg-purple-600 text-white btn-rounded-md hover:bg-purple-700 mb-2">
+                  <Button className="bg-purple-600 hover:bg-purple-700 mb-2">
                     {method.buttonText}
                   </Button>
                 )}
@@ -53,6 +53,4 @@ const ContactInfo = ({ methods }) => {
       </div>
     </section>
   );
-};
-
-export default ContactInfo;
+}

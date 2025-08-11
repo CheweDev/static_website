@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { footerLinks } from "@/lib/data";
 
-const Footer = () => {
+export default function Footer() {
   return (
     <footer className="bg-slate-900 text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -11,20 +11,26 @@ const Footer = () => {
           <div>
             <div className="flex items-center space-x-3 mb-6">
               <Image
-                src="https://placehold.co/400"
+                src="/placeholder.png"
                 alt="FitPro Trainers Logo"
                 width={40}
                 height={40}
                 className="w-10 h-10 rounded-full object-cover"
                 unoptimized
               />
-              <span className="text-2xl font-bold">FitPro Trainers</span>
+              <span
+                className="text-lg font-semibold"
+                style={{ fontFamily: "Debata" }}
+              >
+                LeadLift
+              </span>
             </div>
             <p className="text-slate-400 mb-6">
               Your premier destination for personal trainer marketing. Transform
               your business with our expert digital marketing strategies.
             </p>
           </div>
+
           <div>
             <h3 className="text-xl font-bold mb-6">Quick Links</h3>
             <ul className="space-y-3">
@@ -40,6 +46,7 @@ const Footer = () => {
               ))}
             </ul>
           </div>
+
           <div>
             <h3 className="text-xl font-bold mb-6">Contact Info</h3>
             <div className="space-y-4">
@@ -49,7 +56,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-blue-400" />
-                <span>info@fitprotrainers.com</span>
+                <span>info@leadlift.com</span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="h-5 w-5 text-blue-400" />
@@ -58,15 +65,14 @@ const Footer = () => {
             </div>
           </div>
         </div>
+
         <div className="border-t border-slate-800 mt-8 pt-8 text-center">
           <p className="text-slate-500">
-            © 2024 FitPro Trainers. All rights reserved. | Privacy Policy |
-            Terms of Service
+            © 2025 Website. All rights reserved. | Privacy Policy | Terms of
+            Service
           </p>
         </div>
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}

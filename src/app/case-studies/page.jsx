@@ -1,11 +1,11 @@
-import Header from "@/components/layout/header";
-import Footer from "@/components/layout/footer";
-import CaseStudies from "@/components/sections/caseStudies";
-import Cta from "@/components/sections/cta";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+import CaseStudiesGridSection from "@/components/sections/CaseStudiesGridSection";
+import CtaSection from "@/components/sections/CtaSection";
 import { caseStudiesData } from "@/lib/data";
 import { Badge } from "@/components/ui/badge";
 
-const CaseStudiesPage = () => {
+export default function CaseStudiesPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-50">
       <Header />
@@ -33,8 +33,8 @@ const CaseStudiesPage = () => {
         </div>
       </section>
 
-      <CaseStudies studies={caseStudiesData} />
-      <Cta
+      <CaseStudiesGridSection studies={caseStudiesData} />
+      <CtaSection
         title="Ready to Be Our Next Success Story?"
         description="Let's discuss how our proven marketing strategies can transform your personal training business."
         primaryLink="/contact"
@@ -43,6 +43,4 @@ const CaseStudiesPage = () => {
       <Footer />
     </div>
   );
-};
-
-export default CaseStudiesPage;
+}

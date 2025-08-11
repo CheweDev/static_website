@@ -2,8 +2,8 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { Menu, SquarePen } from "lucide-react";
 import { usePathname } from "next/navigation";
-import { Dumbbell, ArrowRight, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { navLinks } from "@/lib/data";
 import {
@@ -15,25 +15,26 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 
-const Header = () => {
+export default function Header() {
   const pathname = usePathname();
-
   return (
-    <header className="bg-white/80 backdrop-blur-md shadow-sm border-b border-slate-200/50 sticky top-0 z-50">
+    <header className="fixed top-2 left-1/2 -translate-x-1/2 z-50 bg-black/40 border-0 backdrop-blur-md rounded-full px-6 py-3 max-w-7xl w-[90%]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4 w-full">
+        <div className="flex justify-between items-center w-full">
           <div className="hidden md:flex items-center justify-between w-full">
             <Link href="/" className="flex items-center space-x-3">
               <Image
-                src="https://placehold.co/400"
-                alt="FitPro Trainers Logo"
+                src="/placeholder.png"
                 width={40}
                 height={40}
-                className="w-10 h-10 rounded-full object-cover"
-                unoptimized
+                alt="app logo"
+                className="h-10 w-10 rounded-full"
               />
-              <span className="text-2xl font-bold bg-gradient-to-r from-slate-900 to-slate-700 bg-clip-text text-transparent">
-                FitPro Trainers
+              <span
+                className="text-lg font-semibold bg-gradient-to-r text-white bg-clip-text"
+                style={{ fontFamily: "Debata" }}
+              >
+                LeadLift
               </span>
             </Link>
 
@@ -44,10 +45,10 @@ const Header = () => {
                   <Link
                     key={link.name}
                     href={link.href}
-                    className={`font-medium transition-colors ${
+                    className={`font-medium transition-colors text-white ${
                       isActive
-                        ? "text-blue-600 font-semibold"
-                        : "text-slate-600 hover:text-blue-600"
+                        ? "text-yellow-400 font-semibold"
+                        : "text-slate-600"
                     }`}
                   >
                     {link.name}
@@ -55,75 +56,87 @@ const Header = () => {
                 );
               })}
             </nav>
+
             <Link href="/#quote">
-              <Button className="bg-gradient-to-r btn-rounded-md from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-lg hover:shadow-xl transition-all duration-300 group">
-                <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                Get Free Consultation
+              <Button className="rounded-full cursor-pointer bg-gray-300 hover:bg-white tracking-widest shadow-lg hover:shadow-xl transition-all duration-300 group">
+                <SquarePen className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                Free Consultation
               </Button>
             </Link>
           </div>
 
-          {/* Mobile Header */}
           <div className="flex md:hidden items-center justify-between w-full">
+            <Link href="/" className="flex items-center space-x-2">
+              <Image
+                src="/placeholder.png"
+                width={40}
+                height={40}
+                alt="app logo"
+                className="h-10 w-10 rounded-full"
+              />
+              <span
+                className="text-lg font-semibold bg-gradient-to-r text-white bg-clip-text"
+                style={{ fontFamily: "Debata" }}
+              >
+                LeadLift
+              </span>
+            </Link>
             <Sheet>
               <SheetTrigger asChild>
-                <Button variant="ghost" size="icon" className="text-slate-600">
+                <Button variant="ghost" size="icon" className="text-white">
                   <Menu className="h-6 w-6" />
                   <span className="sr-only">Toggle navigation menu</span>
                 </Button>
               </SheetTrigger>
               <SheetContent
                 side="right"
-                className="w-[300px] sm:w-[400px] bg-white/95 backdrop-blur-md"
+                className="w-[250px] sm:w-[300px] bg-white/70 backdrop-blur-md p-4"
               >
                 <SheetHeader>
                   <SheetTitle>
                     <Link href="/" className="flex items-center space-x-3">
                       <Image
-                        src="https://placehold.co/400"
-                        alt="FitPro Trainers Logo"
+                        src="/placeholder.png"
                         width={40}
                         height={40}
-                        className="w-10 h-10 rounded-full object-cover"
-                        unoptimized
+                        alt="app logo"
+                        className="h-10 w-10 rounded-full"
                       />
-                      <span className="text-xl font-bold bg-gradient-to-r from-slate-900 to-slate-700 bg-clip-text text-transparent">
-                        FitPro Trainers
+                      <span
+                        className="text-lg font-semibold bg-gradient-to-r from-slate-900 to-slate-700 bg-clip-text text-transparent"
+                        style={{ fontFamily: "Debata" }}
+                      >
+                        LeadLift
                       </span>
                     </Link>
                   </SheetTitle>
                   <SheetDescription className="sr-only">
-                    Navigation menu for FitPro Trainers website.
+                    Navigation menu for NextEdge website.
                   </SheetDescription>
                 </SheetHeader>
-                <nav className="flex flex-col gap-4 p-5">
-                  {navLinks.map((link) => (
-                    <Link
-                      key={link.name}
-                      href={link.href}
-                      className="text-slate-700 hover:text-blue-600 text-lg font-medium transition-colors py-2"
-                    >
-                      {link.name}
-                    </Link>
-                  ))}
+                <nav className="flex flex-col gap-6 mt-8">
+                  {navLinks.map((link) => {
+                    const isActive = pathname === link.href;
+                    return (
+                      <Link
+                        key={link.name}
+                        href={link.href}
+                        className={`font-medium transition-colors hover:text-blue-600 ${
+                          isActive
+                            ? "text-blue-600 font-semibold"
+                            : "text-slate-600"
+                        }`}
+                      >
+                        {link.name}
+                      </Link>
+                    );
+                  })}
                 </nav>
               </SheetContent>
             </Sheet>
-
-            <Link href="/#quote">
-              <Button
-                size="sm"
-                className="bg-gradient-to-r btn-rounded-md from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-lg"
-              >
-                <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                Get Free Consulation
-              </Button>
-            </Link>
           </div>
         </div>
       </div>
     </header>
   );
-};
-
-export default Header;
+}

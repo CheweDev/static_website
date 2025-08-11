@@ -10,7 +10,7 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, CheckCircle } from "lucide-react";
 
-const CaseStudies = ({ studies }) => {
+export default function CaseStudiesGridSection({ studies }) {
   return (
     <section className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -28,18 +28,17 @@ const CaseStudies = ({ studies }) => {
           {studies.map((study) => (
             <Card
               key={study.id}
-              className="group hover:shadow-2xl transition-all duration-500 border-0 bg-white/80 backdrop-blur-sm overflow-hidden"
+              className="group btn-rounded-lg hover:shadow-2xl transition-all duration-500 border-0 bg-white/80 backdrop-blur-sm overflow-hidden"
             >
-              <div className="relative h-70 w-full overflow-hidden">
+              <div className="relative h-60 w-full overflow-hidden">
                 <Image
-                  src={study.image || "https://placehold.co/600x400"}
+                  src={study.image || "/placeholder.png"}
                   alt={study.title}
                   layout="fill"
                   objectFit="cover"
                   className="group-hover:scale-105 transition-transform duration-500"
-                  unoptimized
                 />
-                <Badge className="absolute rounded-full top-4 left-4 bg-blue-600 text-white">
+                <Badge className="absolute top-4 left-4 bg-blue-600 text-white">
                   {study.category}
                 </Badge>
               </div>
@@ -66,7 +65,7 @@ const CaseStudies = ({ studies }) => {
                 <p className="text-slate-700 font-semibold mb-6">
                   - {study.client}
                 </p>
-                <Button className="w-full btn-rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white group">
+                <Button className="w-full rounded-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white group">
                   Read Full Case Study
                   <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Button>
@@ -77,6 +76,4 @@ const CaseStudies = ({ studies }) => {
       </div>
     </section>
   );
-};
-
-export default CaseStudies;
+}

@@ -5,9 +5,9 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
-const Mission = ({ missionCards }) => {
+export default function MissionSection({ missionCards }) {
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -25,7 +25,7 @@ const Mission = ({ missionCards }) => {
           {missionCards.map((card) => (
             <Card
               key={card.id}
-              className="group hover:shadow-2xl transition-all duration-500 border-0 bg-white/80 backdrop-blur-sm text-center"
+              className="group hover:shadow-2xl btn-rounded-lg transition-all duration-500 border-0 bg-white/80 backdrop-blur-sm text-center"
             >
               <CardHeader>
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-purple-600 rounded-full flex items-center justify-center mb-4 mx-auto">
@@ -44,6 +44,4 @@ const Mission = ({ missionCards }) => {
       </div>
     </section>
   );
-};
-
-export default Mission;
+}

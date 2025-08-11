@@ -1,9 +1,9 @@
 import { MapPin, Clock, Phone, Mail } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
-const OfficeInfo = () => {
+export default function OfficeInfoSection() {
   return (
-    <section className="py-24 bg-gray-50">
+    <section className="bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -34,7 +34,7 @@ const OfficeInfo = () => {
                       <br />
                       Suite 456
                       <br />
-                      Sample City, ST 12345
+                      Your City, ST 12345
                     </p>
                   </div>
                 </div>
@@ -79,6 +79,4 @@ const OfficeInfo = () => {
       </div>
     </section>
   );
-};
-
-export default OfficeInfo;
+}

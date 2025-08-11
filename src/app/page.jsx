@@ -1,16 +1,15 @@
-import Header from "@/components/layout/header";
-import Footer from "@/components/layout/footer";
-import HeroSection from "@/components/sections/hero";
-import ServicesGridSection from "@/components/sections/servicesGrid";
-import QuoteFormSection from "@/components/sections/quoteForm";
-import WhyChooseUsSection from "@/components/sections/whyChooseUs";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+import HeroSection from "@/components/sections/HeroSection";
+import MarketingServicesSection from "@/components/sections/MarketingServicesSection";
+import QuoteFormSection from "@/components/sections/QuoteFormSection";
+import WhyChooseUsSection from "@/components/sections/WhyChooseUsSection";
+import TestimonialsGridSection from "@/components/sections/TestimonialsGridSection";
 import {
   heroStats,
-  popularServices,
-  specializedServices,
-  lifeStageServices,
-  trainerPreferences,
+  mainServices,
   whyChooseUsItems,
+  testimonialsData,
 } from "@/lib/data";
 
 export default function HomePage() {
@@ -18,14 +17,9 @@ export default function HomePage() {
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-50">
       <Header />
       <HeroSection stats={heroStats} />
-
-      <ServicesGridSection
-        popular={popularServices}
-        specialized={specializedServices}
-        lifeStage={lifeStageServices}
-        trainerPreferences={trainerPreferences}
-      />
-      <WhyChooseUsSection items={whyChooseUsItems.slice(0, 3)} />
+      <MarketingServicesSection services={mainServices} />
+      <WhyChooseUsSection items={whyChooseUsItems} />
+      <TestimonialsGridSection testimonials={testimonialsData} />
       <QuoteFormSection />
       <Footer />
     </div>

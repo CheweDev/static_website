@@ -1,18 +1,17 @@
-import Header from "@/components/layout/header";
-import Footer from "@/components/layout/footer";
-import AboutStory from "@/components/sections/aboutStory";
-import Mission from "@/components/sections/mission";
-import WhyChooseUs from "@/components/sections/whyChooseUs";
-import Stats from "@/components/sections/stats";
-import Cta from "@/components/sections/cta";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+import AboutStorySection from "@/components/sections/AboutStorySection";
+import MissionSection from "@/components/sections/MissionSection";
+import WhyChooseUsSection from "@/components/sections/WhyChooseUsSection";
+import StatsSection from "@/components/sections/StatsSection";
+import CtaSection from "@/components/sections/CtaSection";
 import { missionCards, whyChooseUsItems, statsData } from "@/lib/data";
 import { Badge } from "@/components/ui/badge";
 
-const About = () => {
+export default function AboutPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-50">
       <Header />
-      {/* Hero Section for About Page */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700"></div>
         <div className="absolute inset-0 bg-black/20"></div>
@@ -27,7 +26,7 @@ const About = () => {
               About Our Mission
             </Badge>
             <h1 className="text-5xl lg:text-6xl font-bold mb-8">
-              About FitPro Trainers
+              About LeadLift
             </h1>
             <p className="text-xl mb-8 text-blue-100 max-w-3xl mx-auto leading-relaxed">
               We're the leading marketing agency dedicated exclusively to
@@ -38,21 +37,19 @@ const About = () => {
         </div>
       </section>
 
-      <AboutStory />
-      <Mission missionCards={missionCards} />
-      <WhyChooseUs items={whyChooseUsItems} />
-      <Stats stats={statsData} />
-      <Cta
+      <AboutStorySection />
+      <MissionSection missionCards={missionCards} />
+      <WhyChooseUsSection items={whyChooseUsItems} />
+      <StatsSection stats={statsData} />
+      <CtaSection
         title="Ready to Grow Your Training Business?"
         description="Join hundreds of successful personal trainers who trust us to handle their marketing while they focus on changing lives."
         primaryLink="/#quote"
-        primaryText="Get Your Free Quote"
+        primaryText="Get Your Free Consultation"
         secondaryLink="/contact"
         secondaryText="Contact Us Today"
       />
       <Footer />
     </div>
   );
-};
-
-export default About;
+}

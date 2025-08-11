@@ -14,19 +14,41 @@ import {
 } from "lucide-react";
 
 export const navLinks = [
-  { name: "Services", href: "/services" },
-  { name: "About", href: "/about" },
-  { name: "Pricing", href: "/pricing" },
+  { name: "Home", href: "/" },
+  { name: "About Us", href: "/about" },
   { name: "Case Studies", href: "/case-studies" },
-  { name: "Testimonials", href: "/testimonials" },
-  { name: "Resources", href: "/resources" },
-  { name: "Contact", href: "/contact" },
+  { name: "Blog", href: "/resources" },
+  { name: "Contact Us", href: "/contact" },
 ];
 
 export const heroStats = [
-  { value: "500+", label: "Expert Trainers" },
-  { value: "10k+", label: "Success Stories" },
+  { value: "500+", label: "Trainers Helped" },
+  { value: "10k+", label: "Leads Generated" },
   { value: "4.9★", label: "Client Rating" },
+];
+
+export const expectations = [
+  {
+    icon: "TrendingUp",
+    iconColor: "text-green-500",
+    title: "Boost Business",
+    description:
+      "Our programs are designed to elevate your business performance and help you reach your goals.",
+  },
+  {
+    icon: "MessageSquare",
+    iconColor: "text-blue-500",
+    title: "Engage Your Team",
+    description:
+      "Interactive training sessions that foster collaboration and team spirit.",
+  },
+  {
+    icon: "Users",
+    iconColor: "text-purple-500",
+    title: "Build Connections",
+    description:
+      "Connect with like-minded professionals and expand your network.",
+  },
 ];
 
 export const popularServices = [
@@ -103,7 +125,7 @@ export const specializedServices = [
   },
   {
     id: 6,
-    icon: "Salad",
+    icon: "Salad", // Changed to string
     title: "Nutrition Coaching",
     desc: "Meal planning • Vegan nutrition • Diet guidance",
     gradient: "from-green-500 to-emerald-500",
@@ -148,24 +170,24 @@ export const trainerPreferences = [
     title: "Female Trainers",
     desc: "Professional female personal trainers",
     gradient: "from-pink-500 to-rose-500",
-    icon: "UserRoundFemale",
-    color: "from-pink-500 to-rose-500",
+    icon: "UserRoundFemale", // Added icon as string
+    color: "from-pink-500 to-rose-500", // Added color for icon background
   },
   {
     id: 2,
     title: "Male Trainers",
     desc: "Experienced male personal trainers",
     gradient: "from-blue-500 to-indigo-500",
-    icon: "UserRoundMale",
-    color: "from-blue-500 to-indigo-500",
+    icon: "UserRoundMale", // Added icon as string
+    color: "from-blue-500 to-indigo-500", // Added color for icon background
   },
   {
     id: 3,
     title: "Couples Training",
     desc: "Train together, achieve together",
     gradient: "from-purple-500 to-pink-500",
-    icon: "Users",
-    color: "from-purple-500 to-pink-500",
+    icon: "Users", // Added icon as string
+    color: "from-purple-500 to-pink-500", // Added color for icon background
   },
 ];
 
@@ -177,12 +199,11 @@ export const trainingOptions = [
 ];
 
 export const footerLinks = [
-  "Our Services",
+  "Home",
   "About Us",
-  "Pricing",
   "Case Studies",
-  "Testimonials",
   "Resources",
+  "Contact",
 ];
 export const footerPrograms = [
   "Strength Training",
@@ -209,7 +230,7 @@ export const mainServices = [
       "Monthly ranking reports",
     ],
     color: "from-blue-500 to-cyan-500",
-    price: "Starting at $997/month",
+    // price: "Starting at $997/month", // Removed price
   },
   {
     id: 2,
@@ -225,7 +246,7 @@ export const mainServices = [
       "Professional photography",
     ],
     color: "from-purple-500 to-pink-500",
-    price: "Starting at $2,497",
+    // price: "Starting at $2,497", // Removed price
   },
   {
     id: 3,
@@ -241,7 +262,7 @@ export const mainServices = [
       "Conversion tracking",
     ],
     color: "from-green-500 to-emerald-500",
-    price: "Starting at $1,497/month",
+    // price: "Starting at $1,497/month", // Removed price
   },
   {
     id: 4,
@@ -256,7 +277,7 @@ export const mainServices = [
       "Analytics & reporting",
     ],
     color: "from-orange-500 to-red-500",
-    price: "Starting at $797/month",
+    // price: "Starting at $797/month", // Removed price
   },
   {
     id: 5,
@@ -272,7 +293,7 @@ export const mainServices = [
       "Content strategy planning",
     ],
     color: "from-indigo-500 to-purple-500",
-    price: "Starting at $697/month",
+    // price: "Starting at $697/month", // Removed price
   },
   {
     id: 6,
@@ -287,7 +308,7 @@ export const mainServices = [
       "Custom reporting dashboard",
     ],
     color: "from-yellow-500 to-orange-500",
-    price: "Starting at $3,997/month",
+    // price: "Starting at $3,997/month", // Removed price
   },
 ];
 
@@ -481,7 +502,7 @@ export const urgencyOptions = [
   "Just exploring options",
 ];
 
-// Pricing Page Data
+// Pricing Page Data (kept for reference, but not used on a dedicated page anymore)
 export const pricingTiers = [
   {
     name: "Starter",
@@ -539,7 +560,7 @@ export const pricingTiers = [
 export const caseStudiesData = [
   {
     id: 1,
-    image: "https://placehold.co/600x400",
+    image: "/placeholder.png",
     category: "Local SEO & Website Redesign",
     title: "Boosting 'FitLife Coaching' to #1 in Miami",
     description:
@@ -553,7 +574,7 @@ export const caseStudiesData = [
   },
   {
     id: 2,
-    image: "https://placehold.co/600x400",
+    image: "/placeholder.png",
     category: "Google Ads & Social Media",
     title: "Scaling 'Online Strength Pro' to National Reach",
     description:
@@ -567,7 +588,7 @@ export const caseStudiesData = [
   },
   {
     id: 3,
-    image: "https://placehold.co/600x400",
+    image: "/placeholder.png",
     category: "Content Marketing & SEO",
     title: "Establishing 'Boxing Beast' as an Industry Authority",
     description:
@@ -581,7 +602,6 @@ export const caseStudiesData = [
   },
 ];
 
-// Testimonials Page Data
 export const testimonialsData = [
   {
     id: 1,
@@ -589,7 +609,7 @@ export const testimonialsData = [
       "FitPro Trainers completely transformed my online presence. My website looks amazing, and I'm getting more leads than ever before. Highly recommend!",
     author: "Sarah J.",
     title: "Owner, FitLife Coaching",
-    avatar: "https://placehold.co/400",
+    avatar: "/placeholder.png",
     rating: 5,
   },
   {
@@ -598,7 +618,7 @@ export const testimonialsData = [
       "Their SEO expertise is unmatched. I went from being invisible online to ranking on the first page for my key services. My client base has doubled!",
     author: "Mark T.",
     title: "Founder, Online Strength Pro",
-    avatar: "https://placehold.co/400",
+    avatar: "/placeholder.png",
     rating: 5,
   },
   {
@@ -607,7 +627,7 @@ export const testimonialsData = [
       "The Google Ads campaigns they set up are incredibly effective. I'm getting high-quality leads consistently, and my ROI is fantastic. Best investment I've made.",
     author: "Coach Alex",
     title: "Head Trainer, Boxing Beast",
-    avatar: "https://placehold.co/400",
+    avatar: "/placeholder.png",
     rating: 5,
   },
   {
@@ -616,7 +636,7 @@ export const testimonialsData = [
       "As a new trainer, I was overwhelmed by marketing. FitPro Trainers made it easy. They built my website and got me my first clients. So grateful!",
     author: "Emily R.",
     title: "Certified Personal Trainer",
-    avatar: "https://placehold.co/600x400",
+    avatar: "/placeholder.png",
     rating: 5,
   },
   {
@@ -625,7 +645,7 @@ export const testimonialsData = [
       "Their social media strategy helped me connect with my audience on a deeper level. My engagement is up, and I'm seeing more direct inquiries from social platforms.",
     author: "David L.",
     title: "Online Fitness Coach",
-    avatar: "https://placehold.co/400",
+    avatar: "/placeholder.png",
     rating: 5,
   },
   {
@@ -634,7 +654,7 @@ export const testimonialsData = [
       "The content marketing they provide is top-notch. My blog posts are ranking well, and I'm seen as an authority in my niche. This has brought in so many new clients.",
     author: "Jessica M.",
     title: "Nutrition & Wellness Coach",
-    avatar: "https://placehold.co/400",
+    avatar: "/placeholder.png",
     rating: 5,
   },
 ];
@@ -643,7 +663,7 @@ export const testimonialsData = [
 export const blogPosts = [
   {
     id: 1,
-    image: "https://placehold.co/600x400",
+    image: "/placeholder.png",
     category: "SEO",
     title: "Top 5 SEO Strategies for Personal Trainers in 2024",
     date: "July 25, 2024",
@@ -653,7 +673,7 @@ export const blogPosts = [
   },
   {
     id: 2,
-    image: "https://placehold.co/600x400",
+    image: "/placeholder.png",
     category: "Web Design",
     title: "Designing a High-Converting Website for Your Fitness Business",
     date: "July 20, 2024",
@@ -663,7 +683,7 @@ export const blogPosts = [
   },
   {
     id: 3,
-    image: "https://placehold.co/600x400",
+    image: "/placeholder.png",
     category: "Social Media",
     title: "Mastering Social Media for Personal Trainers: A Complete Guide",
     date: "July 15, 2024",
@@ -673,7 +693,7 @@ export const blogPosts = [
   },
   {
     id: 4,
-    image: "https://placehold.co/600x400",
+    image: "/placeholder.png",
     category: "PPC",
     title: "Google Ads for Personal Trainers: Your Blueprint for Success",
     date: "July 10, 2024",
@@ -683,7 +703,7 @@ export const blogPosts = [
   },
   {
     id: 5,
-    image: "https://placehold.co/600x400",
+    image: "/placeholder.png",
     category: "Content Marketing",
     title: "Content That Converts: Engaging Your Fitness Audience",
     date: "July 5, 2024",
@@ -693,7 +713,7 @@ export const blogPosts = [
   },
   {
     id: 6,
-    image: "https://placehold.co/600x400",
+    image: "/placeholder.png",
     category: "Business Growth",
     title:
       "Beyond Training: Strategies for Scaling Your Personal Training Business",
@@ -754,5 +774,138 @@ export const faqItems = [
     question: "Are your services available nationwide?",
     answer:
       "Yes, our digital marketing services are available to personal trainers across the United States and Canada. We leverage online strategies that are effective regardless of your physical location.",
+  },
+];
+
+export const quoteFormFields = [
+  {
+    label: "First Name",
+    name: "firstName",
+    type: "text",
+    placeholder: "Enter your first name",
+    required: true,
+  },
+  {
+    label: "Last Name",
+    name: "lastName",
+    type: "text",
+    placeholder: "Enter your last name",
+    required: true,
+  },
+  {
+    label: "Email",
+    name: "email",
+    type: "email",
+    placeholder: "Enter your business email",
+    required: true,
+  },
+  {
+    label: "Phone Number",
+    name: "phoneNumber",
+    type: "tel",
+    placeholder: "Enter your business phone number",
+    required: true,
+  },
+  {
+    label: "Business Name",
+    name: "businessName",
+    type: "text",
+    placeholder: "Enter your personal training business name",
+    required: true,
+  },
+  {
+    label: "Type of Personal Training Specialty",
+    name: "specialty",
+    type: "select",
+    placeholder: "Select your specialty",
+    options: [
+      "General Fitness & Accountability",
+      "Weight Loss",
+      "Boxing Training",
+      "MMA/Kickboxing/Muay Thai",
+      "Soccer Training",
+      "Basketball Training",
+      "Yoga Training",
+      "Volleyball Training",
+      "Gymnastics Training",
+      "Baseball Training",
+      "Football Training",
+      "Swimming Training",
+      "Bodybuilding",
+      "Calisthenics",
+      "Pilates",
+      "Prenatal Training",
+      "Postpartum Training",
+      "Senior Training (50+)",
+      "Teen Training",
+      "Kids Training",
+      "Special Needs Training",
+      "Couples Training",
+      "Vegan Lifestyle Training",
+      "Menopause Support Training",
+      "Weight Management for Obesity",
+      "Multiple Specialties",
+      "Other",
+    ],
+    required: false,
+  },
+  {
+    label: "Business Location (City, State)",
+    name: "location",
+    type: "text",
+    placeholder: "e.g., Miami, FL",
+    required: false,
+  },
+  {
+    label: "Current Marketing Efforts",
+    name: "marketing",
+    type: "select",
+    placeholder: "Select current marketing efforts",
+    options: [
+      "No current marketing",
+      "Social media only",
+      "Have a website",
+      "Google Ads",
+      "Facebook Ads",
+      "SEO efforts",
+      "Referrals only",
+      "Multiple channels",
+    ],
+    required: false,
+  },
+  {
+    label: "Monthly Marketing Budget",
+    name: "budget",
+    type: "select",
+    placeholder: "Select your budget range",
+    options: [
+      "$500 - $1,000",
+      "$1,000 - $2,500",
+      "$2,500 - $5,000",
+      "$5,000+",
+      "Not sure yet",
+    ],
+    required: false,
+  },
+  {
+    label: "Timeline to Get Started",
+    name: "timeline",
+    type: "select",
+    placeholder: "Select timeline",
+    options: [
+      "As soon as possible",
+      "Within a month",
+      "Within 3 months",
+      "Just exploring options",
+    ],
+    required: false,
+  },
+  {
+    label: "Main Business Goals",
+    name: "goals",
+    type: "textarea",
+    placeholder:
+      "Tell us about your goals - more clients, higher rates, expand to new locations, etc.",
+    required: false,
   },
 ];
