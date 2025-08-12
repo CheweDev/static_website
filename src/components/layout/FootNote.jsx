@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { footerLinks } from "@/lib/data";
 
-export default function Footer() {
+export default function FootNote() {
   return (
     <footer className="bg-slate-900 text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

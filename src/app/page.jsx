@@ -1,5 +1,5 @@
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
+import Nav from "@/components/layout/Nav";
+import FootNote from "@/components/layout/FootNote";
 import HeroSection from "@/components/sections/HeroSection";
 import MarketingServicesSection from "@/components/sections/MarketingServicesSection";
 import QuoteFormSection from "@/components/sections/QuoteFormSection";
@@ -15,13 +15,13 @@ import {
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-50">
-      <Header />
+      <Nav />
       <HeroSection stats={heroStats} />
       <MarketingServicesSection services={mainServices} />
       <WhyChooseUsSection items={whyChooseUsItems} />
       <TestimonialsGridSection testimonials={testimonialsData} />
       <QuoteFormSection />
-      <Footer />
+      <FootNote />
     </div>
   );
 }

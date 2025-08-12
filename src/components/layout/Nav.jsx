@@ -15,7 +15,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 
-export default function Header() {
+export default function Nav() {
   const pathname = usePathname();
   return (
     <header className="fixed top-2 left-1/2 -translate-x-1/2 z-50 bg-black/40 border-0 backdrop-blur-md rounded-full px-6 py-3 max-w-7xl w-[90%]">

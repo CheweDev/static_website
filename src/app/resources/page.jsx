@@ -1,5 +1,5 @@
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
+import Nav from "@/components/layout/Nav";
+import FootNote from "@/components/layout/FootNote";
 import BlogPostsGridSection from "@/components/sections/BlogPostsGridSection";
 import CtaSection from "@/components/sections/CtaSection";
 import { blogPosts } from "@/lib/data";
@@ -8,7 +8,7 @@ import { Badge } from "@/components/ui/badge";
 export default function ResourcesPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-50">
-      <Header />
+      <Nav />
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700"></div>
         <div className="absolute inset-0 bg-black/20"></div>
@@ -41,7 +41,7 @@ export default function ResourcesPage() {
         primaryLink="/contact"
         primaryText="Get Your Free Consultation"
       />
-      <Footer />
+      <FootNote />
     </div>
   );
 }
