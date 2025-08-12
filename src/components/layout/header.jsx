@@ -37,7 +37,6 @@ export default function Header() {
                 LeadLift
               </span>
             </Link>
-
             <nav className="flex space-x-8">
               {navLinks.map((link) => {
                 const isActive = pathname === link.href;
@@ -56,7 +55,6 @@ export default function Header() {
                 );
               })}
             </nav>
-
             <Link href="/#quote">
               <Button className="rounded-full cursor-pointer bg-gray-300 hover:bg-white tracking-widest shadow-lg hover:shadow-xl transition-all duration-300 group">
                 <SquarePen className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -64,7 +62,6 @@ export default function Header() {
               </Button>
             </Link>
           </div>
-
           <div className="flex md:hidden items-center justify-between w-full">
             <Link href="/" className="flex items-center space-x-2">
               <Image

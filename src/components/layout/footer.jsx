@@ -30,7 +30,6 @@ export default function Footer() {
               your business with our expert digital marketing strategies.
             </p>
           </div>
-
           <div>
             <h3 className="text-xl font-bold mb-6">Quick Links</h3>
             <ul className="space-y-3">
@@ -46,7 +45,6 @@ export default function Footer() {
               ))}
             </ul>
           </div>
-
           <div>
             <h3 className="text-xl font-bold mb-6">Contact Info</h3>
             <div className="space-y-4">
@@ -65,7 +63,6 @@ export default function Footer() {
             </div>
           </div>
         </div>
-
         <div className="border-t border-slate-800 mt-8 pt-8 text-center">
           <p className="text-slate-500">
             © 2025 Website. All rights reserved. | Privacy Policy | Terms of
