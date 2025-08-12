@@ -10,22 +10,18 @@ export default function AboutStorySection() {
               Our Story
             </h2>
             <p className="text-lg text-gray-600 mb-6">
-              Founded in 2020, LeadLift was born from a simple observation:
-              personal trainers are experts at transforming bodies and lives,
-              but many struggle with the digital marketing needed to grow their
-              businesses in today's competitive landscape.
+              Lorem ipsum dolor sit amet consectetur adipiscing elit sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
             <p className="text-lg text-gray-600 mb-6">
-              Our founders, former personal trainers themselves, understood the
-              unique challenges facing fitness professionals. They combined
-              their industry knowledge with cutting-edge digital marketing
-              expertise to create a specialized agency that speaks the language
-              of fitness while delivering measurable results.
+              Ut enim ad minim veniam quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat duis aute irure dolor in
+              reprehenderit voluptate velit esse cillum dolore eu fugiat nulla
+              pariatur.
             </p>
             <p className="text-lg text-gray-600">
-              Today, we've helped over 500+ personal trainers across the country
-              build thriving businesses through strategic SEO, targeted
-              advertising, and conversion-optimized websites.
+              Excepteur sint occaecat cupidatat non proident sunt in culpa qui
+              officia deserunt mollit anim id est laborum.
             </p>
           </div>
           <div className="relative">
