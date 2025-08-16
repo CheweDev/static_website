@@ -6,6 +6,26 @@ import FAQSection from "@/components/sections/FAQSection";
 import { Badge } from "@/components/ui/badge";
 import { contactMethods, faqItems } from "@/lib/data";
 
+// SEO metadata for Contact page
+export const metadata = {
+  title:
+    "Contact Leadlift Trainers | Free Personal Trainer Marketing Consultation",
+  description:
+    "Get a free marketing consultation for your personal training business. Contact our team of SEO and digital marketing experts who specialize in helping fitness professionals get more clients.",
+  keywords:
+    "personal trainer marketing consultation, fitness marketing agency contact, personal trainer SEO consultation",
+  openGraph: {
+    title: "Contact Leadlift Trainers - Free Marketing Consultation",
+    description:
+      "Get a free consultation with our personal trainer marketing experts. Let's grow your fitness business together.",
+    url: "https://fitprotrainers.com/contact",
+    type: "website",
+  },
+  alternates: {
+    canonical: "https://fitprotrainers.com/contact",
+  },
+};
+
 export default function ContactPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-50">

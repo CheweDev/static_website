@@ -3,10 +3,27 @@ import FootNote from "@/components/layout/FootNote";
 import AboutStorySection from "@/components/sections/AboutStorySection";
 import MissionSection from "@/components/sections/MissionSection";
 import WhyChooseUsSection from "@/components/sections/WhyChooseUsSection";
-import StatsSection from "@/components/sections/StatsSection";
 import CtaSection from "@/components/sections/CtaSection";
-import { missionCards, whyChooseUsItems, statsData } from "@/lib/data";
+import { missionCards, whyChooseUsItems } from "@/lib/data";
 import { Badge } from "@/components/ui/badge";
+
+export const metadata = {
+  title: "About Leadlift | Personal Trainer Marketing Agency Experts",
+  description:
+    "Learn about Leadlift, the leading marketing agency dedicated to helping personal trainers, boxing coaches, yoga instructors, and fitness professionals get more clients through proven digital marketing strategies.",
+  keywords:
+    "personal trainer marketing agency, fitness marketing experts, personal trainer SEO company, about leadlift trainers",
+  openGraph: {
+    title: "About Ledlift Trainers - Personal Trainer Marketing Experts",
+    description:
+      "The leading marketing agency dedicated exclusively to helping personal trainers grow their businesses.",
+    url: "https://fitprotrainers.com/about",
+    type: "website",
+  },
+  alternates: {
+    canonical: "https://fitprotrainers.com/about",
+  },
+};
 
 export default function AboutPage() {
   return (
@@ -40,7 +57,6 @@ export default function AboutPage() {
       <AboutStorySection />
       <MissionSection missionCards={missionCards} />
       <WhyChooseUsSection items={whyChooseUsItems} />
-      <StatsSection stats={statsData} />
       <CtaSection
         title="Ready to Grow Your Training Business?"
         description="Join hundreds of successful personal trainers who trust us to handle their marketing while they focus on changing lives."

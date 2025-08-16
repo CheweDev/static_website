@@ -5,6 +5,26 @@ import CtaSection from "@/components/sections/CtaSection";
 import { caseStudiesData } from "@/lib/data";
 import { Badge } from "@/components/ui/badge";
 
+// SEO metadata for Case Studies page
+export const metadata = {
+  title:
+    "Personal Trainer Marketing Case Studies | Proven Results & Success Stories",
+  description:
+    "See real results from our personal trainer marketing campaigns. Case studies showing 300%+ lead increases, #1 Google rankings, and business growth for boxing trainers, yoga instructors, and fitness professionals.",
+  keywords:
+    "personal trainer marketing case studies, fitness SEO results, personal trainer success stories, boxing trainer marketing results",
+  openGraph: {
+    title: "Personal Trainer Marketing Case Studies - Real Results",
+    description:
+      "See how we've helped personal trainers achieve 300%+ lead increases and dominate their local markets.",
+    url: "https://fitprotrainers.com/case-studies",
+    type: "website",
+  },
+  alternates: {
+    canonical: "https://fitprotrainers.com/case-studies",
+  },
+};
+
 export default function CaseStudiesPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-50">

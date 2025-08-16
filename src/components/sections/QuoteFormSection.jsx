@@ -130,30 +130,6 @@ export default function QuoteFormSection() {
             </form>
           </div>
         </div>
-
-        {/* <div className="text-center mt-12 space-y-6">
-          <h4 className="text-lg font-semibold text-white">
-            What to Expect From Your Free Consultation
-          </h4>
-          <div className="grid md:grid-cols-3 gap-6 mt-6">
-            {expectations.map(
-              ({ icon: Icon, title, description, bgColor, iconColor }) => (
-                <div
-                  key={title}
-                  className="bg-white p-6 shadow-sm border border-gray-100 btn-rounded-lg"
-                >
-                  <div
-                    className={`w-12 h-12 ${bgColor} rounded-lg flex items-center justify-center mx-auto mb-4`}
-                  >
-                    <Icon className={`h-6 w-6 ${iconColor}`} />
-                  </div>
-                  <h5 className="font-semibold text-gray-800 mb-2">{title}</h5>
-                  <p className="text-sm text-gray-600">{description}</p>
-                </div>
-              )
-            )}
-          </div>
-        </div> */}
       </div>
     </section>
   );

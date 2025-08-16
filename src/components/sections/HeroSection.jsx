@@ -51,9 +51,9 @@ export default function HeroSection({ stats }) {
         </h1>
 
         <p className="text-base sm:text-lg md:text-xl mb-10 text-blue-100 leading-relaxed max-w-2xl mx-auto">
-          We craft cutting-edge digital marketing strategies — from SEO to
-          social media — tailored to help personal trainers attract more clients
-          and grow their business.
+          We provide cutting-edge digital marketing strategies, from SEO to
+          social media, designed exclusively to help personal trainers attract
+          more clients and scale their impact.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

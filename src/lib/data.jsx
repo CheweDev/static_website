@@ -22,9 +22,9 @@ export const navLinks = [
 ];
 
 export const heroStats = [
-  { value: "500+", label: "Trainers Helped" },
-  { value: "10k+", label: "Leads Generated" },
-  { value: "4.9★", label: "Client Rating" },
+  { value: "35+", label: "Trainer Specialties" },
+  { value: "24/7", label: "Support Available" },
+  { value: "Free", label: "Initial Consultation" },
 ];
 
 export const expectations = [
@@ -407,13 +407,6 @@ export const whyChooseUsItems = [
     description:
       "We get your campaigns up and running quickly. Most clients start seeing increased website traffic and leads within the first 30 days.",
   },
-];
-
-export const statsData = [
-  { value: "500+", label: "Personal Trainers Served" },
-  { value: "300%", label: "Average Lead Increase" },
-  { value: "95%", label: "Client Retention Rate" },
-  { value: "$2M+", label: "Revenue Generated for Clients" },
 ];
 
 // Contact Page Data
@@ -907,5 +900,49 @@ export const quoteFormFields = [
     placeholder:
       "Tell us about your goals - more clients, higher rates, expand to new locations, etc.",
     required: false,
+  },
+];
+
+export const trainerSpecialties = [
+  {
+    category: "Combat Sports",
+    specialties: ["Boxing", "MMA", "Kickboxing", "Muay Thai"],
+    searchExample: "personal boxing trainer near me",
+    color: "from-red-500 to-pink-500",
+  },
+  {
+    category: "Team Sports",
+    specialties: ["Soccer", "Basketball", "Volleyball", "Baseball", "Football"],
+    searchExample: "personal soccer trainer near me",
+    color: "from-blue-500 to-indigo-500",
+  },
+  {
+    category: "Mind-Body",
+    specialties: ["Yoga", "Pilates", "Meditation"],
+    searchExample: "personal yoga trainer near me",
+    color: "from-purple-500 to-violet-500",
+  },
+  {
+    category: "Strength & Conditioning",
+    specialties: ["Bodybuilding", "Calisthenics", "General Fitness"],
+    searchExample: "personal fitness trainer near me",
+    color: "from-orange-500 to-amber-500",
+  },
+  {
+    category: "Specialized Demographics",
+    specialties: ["Seniors (50+)", "Prenatal", "Postpartum", "Kids & Teens"],
+    searchExample: "personal trainer for seniors near me",
+    color: "from-green-500 to-emerald-500",
+  },
+  {
+    category: "Specialty Services",
+    specialties: [
+      "Weight Loss",
+      "Nutrition Coaching",
+      "Special Needs",
+      "Couples Training",
+    ],
+    searchExample: "personal trainer for weight loss near me",
+    color: "from-teal-500 to-cyan-500",
   },
 ];

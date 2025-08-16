@@ -56,7 +56,7 @@ export default function Nav() {
               })}
             </nav>
             <Link href="/#quote">
-              <Button className="rounded-full cursor-pointer bg-gray-300 hover:bg-white tracking-widest shadow-lg hover:shadow-xl transition-all duration-300 group">
+              <Button className="rounded-full cursor-pointer bg-gray-300 hover:bg-white tracking-wide shadow-lg hover:shadow-xl transition-all duration-300 group">
                 <SquarePen className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 Free Consultation
               </Button>

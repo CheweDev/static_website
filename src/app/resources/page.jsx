@@ -5,6 +5,26 @@ import CtaSection from "@/components/sections/CtaSection";
 import { blogPosts } from "@/lib/data";
 import { Badge } from "@/components/ui/badge";
 
+// SEO metadata for Resources page
+export const metadata = {
+  title:
+    "Personal Trainer Marketing Resources | SEO Tips & Business Growth Guides",
+  description:
+    "Free marketing resources for personal trainers. Learn SEO strategies, website optimization, social media marketing, and business growth tactics specifically for fitness professionals.",
+  keywords:
+    "personal trainer marketing tips, fitness SEO guide, personal trainer business resources, boxing trainer marketing advice",
+  openGraph: {
+    title: "Personal Trainer Marketing Resources & Guides",
+    description:
+      "Free marketing resources and expert guides to help personal trainers grow their businesses.",
+    url: "https://fitprotrainers.com/resources",
+    type: "website",
+  },
+  alternates: {
+    canonical: "https://fitprotrainers.com/resources",
+  },
+};
+
 export default function ResourcesPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-50">
